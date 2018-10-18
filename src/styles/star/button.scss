@@ -1,0 +1,98 @@
+@import '../variables';
+
+//.el-button {
+//  display: inline-block;
+//  line-height: 1;
+//  white-space: nowrap;
+//  cursor: pointer;
+//  background: #fff;
+//  border: 1px solid #dcdfe6;
+//  color: #606266;
+//  -webkit-appearance: none;
+//  text-align: center;
+//  -webkit-box-sizing: border-box;
+//  box-sizing: border-box;
+//  outline: 0;
+//  margin: 0;
+//  -webkit-transition: .1s;
+//  transition: .1s;
+//  font-weight: 500;
+//  padding: 12px 20px;
+//  font-size: 14px;
+//  border-radius: 4px;
+//}
+
+@mixin colorBtn($color,$color1,$color2,$height) {
+  padding: 0 20px;
+  min-width: 110px;
+  height:$height;
+  line-height: $height -2px;
+  border-color: $color;
+  background: $color;
+  color: #fff;
+  &:focus, &:hover {
+    background: $color1;
+    border-color: $color1;
+    &:before,
+    &:after {
+      background: $color;
+    }
+  }
+  &:active{
+    background: $color2;
+    border-color: $color2;
+    outline: 0;
+  }
+}
+
+@mixin defaultBtn($fontColor,$borderColor1,$borderColorHover,$borderColorFocus,$hoverColor,$focusColor,$height) {
+  padding: 0 20px;
+  min-width: 110px;
+  height:$height;
+  line-height: $height -2px;
+  border-color: $borderColor1;
+  background: transparent;
+  color: $fontColor;
+  &:focus, &:hover {
+    background: $hoverColor;
+    border-color: $borderColorHover;
+    color: $fontColor;
+    &:before,
+    &:after {
+      background: transparent;
+      color: $fontColor;
+    }
+  }
+  &:active{
+    background: $focusColor;
+    border-color: $borderColorFocus;
+    outline: 0;
+    color: $fontColor;
+  }
+}
+
+.el-button--primary.big {
+  @include colorBtn($sc1,$sc1-1,$sc1-2,$sh4);
+}
+
+.el-button--primary {
+  @include colorBtn($sc1,$sc1-1,$sc1-2,$sh3);
+}
+
+.el-button--primary-28 {
+  @include colorBtn($sc1,$sc1-1,$sc1-2,$sh3);
+}
+
+.el-button--default.big {
+  @include defaultBtn($sc13,$sc14,$sc14-1,$sc14-2,$sc15,$sc16,$sh4);
+}
+
+.el-button--default {
+  @include defaultBtn($sc13,$sc14,$sc14-1,$sc14-2,$sc15,$sc16,$sh3);
+}
+
+
+
+
+
+

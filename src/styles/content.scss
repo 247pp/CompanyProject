@@ -1,0 +1,102 @@
+$red_color: #e50117;
+$white_color:#fff;
+$border_color:#ccc;
+$black_color:#333;
+$red_color_hover: #c70115;
+$white_color_hover:#e6e6e6;
+
+.red_val {
+  display: inline-block;
+  width:0;
+  height:0;
+  padding: 8px 2px;
+  background:$red_color;
+}
+.red_text{
+  font-size: 16px;
+  color:$black_color;
+  margin-left:5px;
+
+}
+//搜索的按钮
+.el-icon-search{
+  width:18px;
+  height:18px;
+}
+
+// 按钮共同点
+.button{
+  width:110px;
+  height:28px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height:28px;
+  padding:0;
+}
+// 白色按钮
+.white_button{
+  @extend .button;
+  background:$white_color;
+  color:$black_color;
+  border:1px solid $border_color;
+  &:hover{
+    background:$white_color_hover;
+  }
+}
+//红色按钮
+.red_button{
+  @extend .button;
+  background:$red_color;
+  color:$white_color;
+  border:$red_color;
+  &:hover{
+    background:$red_color_hover;
+  }
+}
+// 模板按钮
+.model{
+  display:inline-block;
+  &>li{
+    cursor:pointer;
+    padding:5px;
+    margin-left:5px;
+    margin-right:5px;
+    width:80px;
+    height:28px;
+    font-size:12px;
+    border-radius: 2px;
+    background:#fafafa;
+    color:#666;
+    display:inline-block;
+    border:1px solid #e5e5e5;
+    &:hover{
+      background:#e5e5e5;
+      color:#333333;
+      display:inline-block;
+      border:1px solid #e5e5e5;
+    }
+    i{
+      padding:3px;
+    }
+  }
+  .last{
+    background:$white_color;
+  }
+}
+//提示文字
+.tip{
+  font-size:14px;
+  color:#999;
+}
+////表格样式
+//.table{
+//  //复选选中样式
+//  .el-checkbox__input.is-checked .el-checkbox__inner,
+//  .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+//    background-color: $red_color;
+//    border-color: $red_color;
+//  }
+////  选中行颜色
+//  color:$black_color;
+//
+//}

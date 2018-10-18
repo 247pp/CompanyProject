@@ -1,0 +1,23 @@
+.detail1 {
+  .text {
+    font-size: 14px;
+    line-height: 1.5;
+    &.left {
+      text-align: left;
+
+    }
+    &.right {
+      text-align: right;
+      .title{
+        margin-right: 10px;
+      }
+    }
+  }
+  .p {
+    line-height: 1.7;
+  }
+
+  .item {
+    margin-bottom: 18px;
+  }
+}

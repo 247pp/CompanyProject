@@ -1,0 +1,106 @@
+//小站开户变量
+$littleSiteML: 15px;
+$littleSiteMT: 30px; //底部按钮上边距
+$littleSiteMB: 20px; //底部按钮下边距
+$littleSiteMR: 10px; //底部按钮下边距
+
+//小站开户样式
+.newAccountWrap {
+  & > .el-card {
+    .el-radio + .el-radio {
+      margin-left: $littleSiteML;
+    }
+    .contractUpload {
+      overflow: hidden;
+    }
+    .contractTit {
+      float: left;
+      margin-right: $littleSiteMR;
+      line-height: $sh5;
+      font-size: $sfs1;
+      color: $sc8;
+    }
+    .upload-demo {
+      float: left;
+    }
+    //输入框高度
+    .el-input--small .el-input__inner {
+      height: $sh5;
+      line-height: $sh5;
+    }
+    .el-form-item--medium {
+      label {
+        font-weight: normal;
+      }
+    }
+  }
+  .contentBottom {
+    padding: $littleSiteMT 0 $littleSiteMB;
+    text-align: center;
+  }
+}
+
+//小站agreement组件变量
+$agreementP0: 0px;
+$agreementFS: 12px;
+$agreementTD: underline;
+
+//小站agreement组件样式
+.el-card {
+  .agreementCheck > .el-checkbox__label {
+    padding-left: $agreementP0;
+  }
+  a.agreement {
+    color: $sc1;
+    font-size: $sfs1;
+    text-decoration: $agreementTD;
+  }
+  .agreementError {
+    color: $sc1;
+    font-size: $agreementFS;
+  }
+}
+
+//小站区域信息组件变量
+$areaInfoW: 300px;
+
+//小站区域信息组件样式
+.el-card {
+  .areaSelectInfo {
+    .el-form-item__content {
+      input {
+        width: $areaInfoW;
+        height: $sh5;
+      }
+    }
+  }
+}
+
+//小站网络服务组件变量
+$internetServicePL: 2px;
+$internetServiceMT: 10px;
+$internetServiceW: 20%;
+
+//小站网络服务组件样式
+
+.checkGroupInternet {
+  .el-radio__label {
+    padding-left: $internetServicePL;
+  }
+}
+
+.modemInput {
+  &.demo-input-suffix {
+    font-size: $sfs1;
+    margin-top: $internetServiceMT;
+    font-weight: normal;
+    color: $sc8;
+  }
+  .el-input {
+    width: $internetServiceW;
+    .el-input__inner {
+      line-height: $sh5;
+      height: $sh5;
+    }
+  }
+}

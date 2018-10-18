@@ -1,0 +1,7 @@
+
+@function subtraction($first, $second) {
+  @return $first - $second;
+}
+@function addition($first, $second) {
+  @return $first + $second;
+}

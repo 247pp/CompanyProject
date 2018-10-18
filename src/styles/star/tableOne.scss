@@ -1,0 +1,31 @@
+@mixin tableStyle($color,$color1,$color2,$height1,$height2) {
+  .el-table {
+    td {
+      height: $height1;
+      padding: 0;
+      font-weight: 400;
+    }
+    th {
+      background: $color;
+      padding: 0;
+      height: $height2;
+      font-weight: 700;
+      color: $color1;
+    }
+    .hover-row td {
+      background-color: $color2;
+    }
+  }
+}
+
+@mixin tablePagination($color,$color1) {
+  .el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: $color;
+    color: $color1;
+  }
+}
+
+.el-card.tableOne {
+  @include tableStyle($sts1, $sc13, $sc10, $sts2, $sts0);
+  @include tablePagination($sc1, $menuHover);
+}
